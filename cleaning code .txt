@@ -1,0 +1,47 @@
+if (@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").substring(0, Math.min(@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length(), 1)) == \"0\") {
+if (@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length()==11) {
+CommonUDFs.getStandardNumber(\"234\"+@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").substring(1))
+}
+else
+{
+
+CommonUDFs.getStandardNumber(\"0\")
+}
+}
+else if (@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").substring(0, Math.min(@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length(), 4)) == \"2340\") {
+if (@@msisdn.trim.replaceAll(\"[^0-9]\", \"\").length() == 14) {
+CommonUDFs.getStandardNumber(\"234\" + @@msisdn.trim.replaceAll(\"[^0-9]\", \"\").substring(4))
+}
+else {
+if ((@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length()==11 && @@msisdn.trim.replaceAll(\"[^0-9]\",\"\").substring(0, Math.min(@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length(), 3)) == \"234\") || (@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length()==13 && @@msisdn.trim.replaceAll(\"[^0-9]\",\"\").substring(0, Math.min(@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length(), 3)) == \"234\"))
+// if (@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").substring(0, Math.min(@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length(), 4)) == \"2340\")
+CommonUDFs.getStandardNumber(@@msisdn.trim.replaceAll(\"[^0-9]\",\"\"))
+else
+{
+CommonUDFs.getStandardNumber(\"0\")
+}
+}
+}
+
+else     if (@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").substring(0, Math.min(@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length(), 1)) != \"0\") {
+if (@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length()==10 ) {
+CommonUDFs.getStandardNumber(\"234\"+@@msisdn.trim.replaceAll(\"[^0-9]\",\"\"))
+}
+else {
+if ((@@msisdn.trim.replaceAll(\"[^0-9]\", \"\").length() == 11 && @@msisdn.trim.replaceAll(\"[^0-9]\", \"\").substring(0, Math.min(@@msisdn.trim.replaceAll(\"[^0-9]\", \"\").length(), 3)) == \"234\") || (@@msisdn.trim.replaceAll(\"[^0-9]\", \"\").length() == 13 && @@msisdn.trim.replaceAll(\"[^0-9]\", \"\").substring(0, Math.min(@@msisdn.trim.replaceAll(\"[^0-9]\", \"\").length(), 3)) == \"234\"))
+// if (@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").substring(0, Math.min(@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length(), 4)) == \"2340\")
+CommonUDFs.getStandardNumber(@@msisdn.trim.replaceAll(\"[^0-9]\", \"\"))
+else {
+CommonUDFs.getStandardNumber(\"0\")
+}
+}
+}
+else
+{
+if ((@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length()==11 && @@msisdn.trim.replaceAll(\"[^0-9]\",\"\").substring(0, Math.min(@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length(), 3)) == \"234\") || (@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length()==13 && @@msisdn.trim.replaceAll(\"[^0-9]\",\"\").substring(0, Math.min(@@msisdn.trim.replaceAll(\"[^0-9]\",\"\").length(), 3)) == \"234\"))
+CommonUDFs.getStandardNumber(@@msisdn.trim.replaceAll(\"[^0-9]\",\"\"))
+else
+{
+CommonUDFs.getStandardNumber(\"0\")
+}
+}
